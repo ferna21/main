@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i></a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Productos
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                  <a class="dropdown-item" href="alimento.html">Alimento</a>
+                  <a class="dropdown-item" href="identificadores.html">Identificadores</a>
+                </div>
+              </li>
+          </ul>
+          <form class="form-inline ml-auto" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav m-2">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin"><i class="fa-solid fa-user"></i></a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin"><i class="fa-solid fa-right-from-bracket"></i></a>
+          </li> 
+          </ul>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Carrito de compras</h2>
+            <p>Aqui se escuentran los productos que deseas</p>            
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><img src="img/identificadores/323925X_01.jpg" alt="" width="100px"></td>
+                        <td>Placa identificatoria hueso con lector QR negro</td>
+                        <td>1</td>
+                        <td>$XXXX</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/Alimento/Alimento-humedo-perro-adulto-carne-100-g.webp" alt="" width="100px"></td>
+                        <td>Alimento humedo de perro</td>
+                        <td>3</td>
+                        <td>$XXXX</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/accesorios/5444004.jpg" alt="" width="100px"></td>
+                        <td>Correa retractil talla S</td>
+                        <td>1</td>
+                        <td>$XXXX</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary btn-block">Ir a pagar</button>
+                </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal" id="modalLogin">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Iniciar Sesión</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div style="text-align: center;">
+                    <img src="img/2190995_circle_green_lock_privacy_safe_icon.png" alt="" width="80">
+                    <form action="suscriptor.html" method="GET">
+                        <div class="form-group">
+                            <label for="txtUser">Usuario:</label>
+                            <input type="text" placeholder="Ej:fr.juillet" class="form-control" id="txtUser" name="txtUser">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass">Contraseña:</label>
+                            <input type="password" placeholder="Ej:12345" class="form-control" id="txtPass" name="txtPass">
+                        </div>
+    
+                        <input type="submit" id="btnEnviar" name="btnEnviar" class="btn btn-success">
+                        <input type="reset" id="btnLimpiar" name="btnLimpiar" class="btn btn-danger">
+                    </form>
+                </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+    </div>
+      <div class="footer bg-secondary">
+        <div class="container-fluid ">
+        <div class="row bg-secondary">
+    
+          <div class="col-12 py-4">
+            <form>
+              <h5>Suscribete</h5>
+              <p>Para recibir informacion de la tienda y los productos nuevos.</p>
+              <div class="d-flex w-150 gap-2">
+                <label for="newsletter1" class="visually-hidden">Correo electronico</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Correo electronico">
+                <button class="btn btn-primary" type="button">Suscribete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-light" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/><i class="fa-brands fa-twitter"></i></svg></a></li>
+            <li class="ms-3"><a class="link-light" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/><i class="fa-brands fa-instagram"></i></svg></a></li>
+            <li class="ms-3"><a class="link-light" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg><i class="fa-brands fa-facebook"></i></a></li>
+          </ul>
+        </div>
+       </div>
+
+</div>
+</body>
+</html>
